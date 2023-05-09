@@ -1,7 +1,6 @@
 from flask import Flask, request
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import load_model
-from flask_cors import CORS
 import pickle
 
 # Load Model
@@ -17,7 +16,6 @@ def rate(p):
 
 
 app = Flask(__name__)
-CORS(app)
 
 
 @app.route("/")
